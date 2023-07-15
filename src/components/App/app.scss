@@ -1,0 +1,14 @@
+ytd-app {
+  --app-drawer-width: 240px;
+  --ytd-persistent-guide-width: 240px;
+  --ytd-permission-role-bottom-bar-height: 30px;
+  --ytd-mini-guide-width: 72px;
+  --app-drawer-content-container-background-color: $yt-spec-base-background;
+  background: black;
+  display: block;
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

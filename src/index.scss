@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$yt-searchbox-border-color: hsl(0, 0%, 18.82%);
+$yt-searchbox-background-color: hsl(0, 0%, 7%);
+$yt-searchbox-border-shadow-color: hsla(0, 0%, 0%, 0);
+$yt-searchbox-text-color: hsla(0, 100%, 100%, 0.88);
+$yt-text-primary: #fff;
+$yt-searchbox-button-border-color: hsl(0, 0%, 18.82%);
+$yt-searchbox-button-color: hsla(0, 0%, 100%, 0.08);
+$yt-searchbox-button-background-color: #222222;
+$ytd-searchbox-text-color: hsla(0, 100%, 100%, 0.88);
+$yt-spec-general-background-color: #181818;
+$yt-spec-static-overlay-text: #fff;
+$yt-header-height: 56px;
+
+$app-drawer-width: 240px;
+$app-drawer-content-container-background-color: #0f0f0f;
+$yt-spec-outline: rgba(255, 255, 255, 0.2);
+$yt-spec-additive-background: rgba(255, 255, 255, 0.1);
+$yt-spec-text-primary: #f1f1f1;
+$yt-spec-text-secondary: #aaa;
+$yt-spec-brand-icon-active: #fff;
+$yt-spec-text-disabled: #717171;
+
+$yt-spec-base-background: #0f0f0f;
+$yt-spec-text-primary-inverse: #0f0f0f;
+$yt-spec-badge-chip-background: rgba(255, 255, 255, 0.1);
+$yt-spec-badge-chip-background-unselected: #272727;
+$yt-spec-badge-chip-background-hover: #3e3e3f;
+$yt-margin-3x: 12px;
+
+$yt-spec-call-to-action: #3ea6ff;
+$yt-spec-outline: rgba(255, 255, 255, 0.2);
+$yt-spec-icon-active-other: #fff;
+
+$ytd-rich-grid-item-margin: 16px;
+
+html {
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 8px;
+    height: 8px;
+  }
+
+  --ytd-rich-grid-item-margin: 16px;
+  --yt-spec-menu-background: #282828;
+  --yt-spec-static-overlay-background-light: rgba(0, 0, 0, 0.1);
+  --yt-spec-icon-inactive: #909090;
+}
+
+
+body {
+  //--ytd-rich-grid-item-margin: 16px;
+  //background: black;
+  //background-image: url("./src/icons/hamburger.png");
+}
+
+.root {
+  //background-image: url("/src/download.jpeg");
+}
+
+ytd-app {
+  --app-drawer-width: 240px;
+  --ytd-persistent-guide-width: 240px;
+  --ytd-permission-role-bottom-bar-height: 30px;
+  --ytd-mini-guide-width: 72px;
+  --app-drawer-content-container-background-color: $yt-spec-base-background;
+  background: black;
+  display: block;
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

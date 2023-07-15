@@ -1,0 +1,25 @@
+yt-icon-shape {
+  height: 100%;
+  width: 100%;
+}
+
+.yt-spec-icon-shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.yt-icon, .typical-svg-class {
+  height: 100%;
+  width: 100%;
+  fill: currentColor;
+}
+
+svg {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

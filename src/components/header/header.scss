@@ -1,0 +1,332 @@
+@import "src/index";
+
+html, body {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+#masterhead-container.ytd-app {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2020;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+#container.ytd-masthead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+  background-color: $yt-spec-base-background;
+}
+
+#start.ytd-masthead, .middle, .end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#start.ytd-masthead {
+  height: inherit;
+}
+
+yt-icon-button {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+yt-icon-button.ytd-masthead {
+  --yt-icon-button-icon-width: 24px;
+  --yt-icon-button-icon-height: 24px;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+#guide-button.ytd-masthead {
+  margin: 0;
+}
+
+#button.yt-icon-button {
+  border: none;
+  background: none;
+  vertical-align: middle;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+yt-icon, .yt-icon-container.yt-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  fill: currentColor;
+  stroke: none;
+  width: 24px;
+  height: 24px;
+}
+
+button.yt-icon-button > yt-icon {
+  width: var(--yt-icon-button-icon-width, 100%);
+  height: var(--yt-icon-button-icon-height, 100%);
+}
+
+#guide-icon.ytd-masthead {
+  color: #fff;
+}
+
+ytd-topbar-logo-renderer {
+  display: flex;
+  flex-direction: row;
+}
+
+#logo.ytd-topbar-logo-renderer {
+  padding: 0;
+  align-items: center;
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.yt-simple-endpoint {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: $yt-text-primary;
+}
+
+yt-icon.ytd-logo {
+  height: 20px;
+  width: 90px;
+  padding: 18px 14px 18px 16px;
+  color: #fff;
+}
+
+yt-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  fill: currentColor;
+  width: var(--iron-icon-width, 24px);
+  height: var(--iron-icon-height, 24px);
+}
+
+#center.ytd-masthead {
+  min-width: 0;
+  flex: 0 1 732px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+ytd-searchbox {
+  display: flex;
+}
+
+#search.ytd-masthead {
+  margin: 0 0 0 40px;
+  padding: 0 4px;
+  flex: 1;
+  flex-basis: 1e-9px;
+}
+
+#search-form.ytd-searchbox {
+  height: 40px;
+  position: relative;
+  flex: 1;
+  flex-basis: 1e-9px;
+  display: flex;
+  flex-direction: row;
+}
+
+#container.ytd-searchbox {
+  position: relative;
+  align-items: center;
+  border: 1px solid $yt-searchbox-border-color;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  background-color: $yt-searchbox-background-color;
+  box-shadow: inset 0 1px 2px $yt-searchbox-border-shadow-color;
+  caret-color: $yt-text-primary;
+  color: $yt-searchbox-text-color;
+  padding: 0 4px 0 16px;
+  margin-left: 32px;
+  flex: 1;
+  flex-basis: 1 e-9px;
+  display: flex;
+  flex-direction: row;
+
+  input.ytd-searchbox {
+    color: $ytd-searchbox-text-color;
+  }
+}
+
+#search-input.ytd-searchbox-spt input {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  color: inherit;
+  font-family: Roboto, Noto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 100%;
+  text-align: inherit;
+  width: 100%;
+}
+
+#container.ytd-searchbox > [slot=search-input] {
+  width: 100%;
+
+  input.ytd-searchbox {
+    outline: none;
+    padding: 1px 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+#search-icon-legacy.ytd-searchbox {
+  border: 1px solid $yt-searchbox-border-color;
+  background-color: $yt-searchbox-button-background-color;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 64px;
+  margin: 0;
+
+  yt-icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+#voice-search-button.ytd-masthead {
+  border-radius: 100px;
+  margin-left: 4px;
+  background-color: $yt-spec-general-background-color;
+
+  &:hover {
+    background-color: dimgrey;
+  }
+}
+
+
+#end.ytd-masthead {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  min-width: 225px;
+  align-items: center;
+  flex: none;
+}
+
+#buttons.ytd-masthead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: none;
+}
+
+ytd-topbar-menu-button:not([button-next]) {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+ytd-topbar-menu-button[is-icon-button][has-to-text] {
+  font-size: 0;
+}
+
+#buttons.ytd-masthead > *.ytd-masthead {
+  display: flex;
+}
+
+#buttons.ytd-masthead > *.ytd-masthead:not(:last-child) {
+  margin-right: 8px;
+}
+
+#voice-search-button.ytd-masthead .ytd-masthead[is-icon-button],
+#buttons.ytd-masthead .ytd-masthead[is-icon-button] {
+  color: $yt-spec-icon-active-other;
+  outline: none;
+}
+
+#button.ytd-topbar-menu-button {
+  color: var(--yt-button-color);
+  background-color: var(--yt-button-background-color);
+}
+
+ytd-topbar-menu-button  #button.ytd-topbar-menu-button {
+  color: inherit;
+  background-color: transparent;
+  text-transform: inherit;
+
+}
+
+a.ytd-topbar-menu-button {
+  display: flex;
+}
+
+a.yt-simple-endpoint.ytd-topbar-menu-button {
+  text-decoration: none;
+  color: inherit;
+  border-radius: inherit;
+
+}
+
+yt-icon-button.ytd-topbar-menu-button {
+  line-height: 1;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+button.yt-icon-button {
+  vertical-align: middle;
+  color: inherit;
+  outline: none;
+  background: none;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  cursor: pointer;
+
+  yt-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 876px) {
+  #logo.ytd-masthead {
+    width: 129px;
+  }
+}
+

@@ -1,0 +1,132 @@
+@import "src/index";
+
+ytd-button-renderer {
+  display: inline-block;
+}
+
+ytd-button-renderer.ytd-feed-filter-chip-bar-renderer {
+  --yt-button-color: $yt-spec-icon-active-other;
+  --yt-button-icon-size: 32px;
+  border-radius: 16px;
+  height: 32px;
+  margin: 0 12px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+yt-button-shape {
+  display: flex;
+  flex: 1;
+  flex-basis: 1e-9px;
+}
+
+.yt-spec-button-shape-next--icon-only-default {
+  min-width: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.yt-spec-button-shape-next {
+  position: relative;
+  white-space: nowrap;
+  min-width: 0;
+  margin: 0;
+  text-transform: none;
+  font-weight: 500;
+  font-family: Roboto Arial sans-serif;
+  border: none;
+  cursor: pointer;
+  outline-width: 0;
+  box-sizing: border-box;
+  background: none;
+  text-decoration: none;
+  flex: 1;
+  flex-basis: 1e-9px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.yt-spec-button-shape-next--size-m {
+  padding: 0 16px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 36px;
+  border-radius: 18px;
+}
+
+.yt-spec-button-shape-next--icon-only-default {
+  min-width: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text {
+  color: #f1f1f1;
+}
+
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text {
+  color: $yt-spec-text-primary;
+}
+
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
+  color: #3ea6ff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--outline {
+  padding: 0 15px;
+  border: 1px solid;
+}
+
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
+  color: $yt-spec-call-to-action;
+  border-color: $yt-spec-outline;
+
+  &:hover {
+    background-color: #273851;
+    border-color: #273851;
+  }
+}
+
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--text {
+  color: $yt-spec-static-overlay-text;
+}
+
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--icon-only-default:hover {
+    background-color: dimgrey;
+}
+
+.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--icon-leading
+.yt-spec-button-shape-next__icon {
+  margin-left: -6px;
+  margin-right: 6px;
+}
+
+.yt-spec-button-shape-next--size-m .yt-spec-button-shape-next__icon {
+  height: 24px;
+  width: 24px;
+}
+
+.yt-spec-button-shape-next__icon {
+  line-height: 0;
+  fill: currentColor;
+}
+
+.yt-spec-button-shape-next__button-text-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.yt-sign-in-button {
+  white-space: nowrap;
+}

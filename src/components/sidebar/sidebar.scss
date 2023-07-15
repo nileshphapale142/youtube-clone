@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "src/index";
+
+tp-yt-app-drawer.ytd-app[persistent] {
+  z-index: 2005;
+}
+
+tp-yt-app-drawer.ytd-app[persistent][position=left] {
+  right: auto;
+}
+
+tp-yt-app-drawer[persistent] {
+  width: $app-drawer-width;
+}
+
+tp-yt-app-drawer[opened] {
+  visibility: visible;
+}
+
+tp-yt-app-drawer {
+  position: fixed;
+  z-index: 1;
+  top: -120px;
+  right: 0;
+  bottom: -120px;
+  left: 0;
+  visibility: hidden;
+  transition-property: visibility;
+}
+
+#contentContainer.tp-yt-app-drawer[opened] {
+  transform: translate3d(0, 0, 0);
+}
+
+#contentContainer.tp-yt-app-drawer[persistent] {
+  width: 100%;
+}
+
+#contentContainer.tp-yt-app-drawer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $app-drawer-width;
+  padding: 120px 0;
+  transition-property: transform;
+  //background-color: $app-drawer-content-container-background-color;
+}
+
+#guide-wrapper.ytd-app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#guide-spacer.ytd-app {
+  margin-top: 56px;
+  opacity: 100%;
+}
+
+#guide-content.ytd-app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 1e-9px;
+  background-color: $app-drawer-content-container-background-color;
+}
+
+#guide-inner-content.ytd-app {
+  flex: 1;
+  flex-basis: 1e-9px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    display: none;
+  }
+
+  &:hover{
+    &::-webkit-scrollbar {
+      width: 8px;
+      display: inherit;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: grey;
+      border-radius: 8px;
+    }
+  }
+}
+
+ytd-guide.ytd-app {
+  width: 240px;
+}
+
+ytd-guide {
+  display: block;
+}
+
+#sections.ytd-guide-renderer {
+  position: relative;
+
+  >*.ytd-guide-renderer:not(:last-child) {
+    border-bottom: 1px solid $yt-spec-outline;
+  }
+
+  >*.ytd-guide-renderer:first-child {
+    padding: 12px;
+  }
+
+  >ytd-guide-section.ytd-guide-renderer:not(:first-child) {
+    padding: 12px;
+  }
+}
+
+ytd-guide-section {
+  --paper-item-min-height: 40px;
+  display: block;
+}
+
+h3.ytd-guide-section-renderer {
+  margin: 0;
+}
+
+ytd-guide-sign-in-promo-renderer {
+  display: inline-block;
+  padding: 16px 32px;
+}
+
+yt-formatted-string.ytd-guide-sign-in-promo-renderer {
+  display: block;
+  color: $yt-spec-text-primary;
+  font-family: 'Roboto', 'Aerial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
+yt-button-renderer {
+  display: inline-block;
+}
+
+#sign-in-button.ytd-guide-sign-in-promo-renderer:not([align-by-text]) {
+  margin-top: 12px;
+}
+
+#guide-section-title.ytd-guide-section-renderer {
+  display: block;
+  padding: 6px 12px 4px;
+  color: $yt-spec-text-primary;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+}
+
+ytd-guide-entry[active] {
+  //background-color: $yt-spec-additive-background;
+
+  &:hover {
+    background-color: $yt-spec-additive-background;
+  }
+}
+
+ytd-guide-entry {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  width: calc(100% - 12px);
+}
+
+#endpoint.yt-simple-endpoint.ytd-guide-entry-renderer {
+  min-height: var(--paper-item-min-height, 48px);
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  color: $yt-spec-text-primary;
+  //display: flex-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+a.ytd-guide-entry-renderer, tp-yt-paper-itmes.ytd-guide-entry-renderer {
+  width: 100%;
+}
+
+.yt-simple-endpoint {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+tp-yt-paper-icon-item[style-target=host], tp-yt-paper-item[style-target=host] {
+  white-space: nowrap;
+}
+
+tp-yt-paper-item.ytd-guide-entry-renderer {
+  --paper-item-focused-before-border-radius: 10px;
+  //--paper-item-focused-before-background: ;
+  padding: 0 12px;
+  min-width: 0;
+  height: var(--paper-item-min-height, 48px);
+  width: 100%;
+}
+
+tp-yt-paper-item, .tp-yt-paper-item.tp-yt-paper-item {
+  display: block;
+  position: relative;
+  //min-height: var(--paper-item-min-height, 48px);
+  padding: 0 16px;
+}
+
+tp-yt-paper-item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  font-family: 'Robot', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+ytd-guide-entry tp-yt-paper-item {
+  min-height: var(--paper-item-min-height, 48px);
+}
+
+
+ytd-guide-entry[active] .guide-icon.ytd-guide-entry-renderer {
+  color: $yt-spec-brand-icon-active;
+}
+
+.guide-icon.ytd-guide-entry-renderer {
+  --iron-icon-height: 24px;
+  --iron-icon-width: 24px;
+  margin-right: 24px;
+  color: $yt-spec-brand-icon-active;
+}
+
+.title.ytd-guide-entry-renderer {
+  color: $yt-spec-text-primary;
+  overflow-y: hidden;
+  white-space: nowrap;
+  font-family: 'Robot', 'Aerial', sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
+  flex: 1;
+  flex-basis: 1e-9px;
+}
+
+ytd-guide-entry[active] .title.ytd-guide-entry-renderer {
+  font-family: 'Roboto', 'Aerial', sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+#guide-links-primary.ytd-guide-renderer {
+  border-top: 1px solid $yt-spec-outline;
+  padding: 16px 24px 0;
+}
+
+#guide-links-secondary.ytd-guide-renderer {
+  padding: 16px 24px 0;
+}
+
+#guide-links-primary.ytd-guide-renderer > a,
+#guide-links-secondary.ytd-guide-renderer > a {
+  display: inline-block!important;
+  text-decoration: none;
+  color: $yt-spec-text-secondary;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-family: Roboto Aerial sans-serif;
+}
+
+#guide-links-primary.ytd-guide-renderer > a:not(:last-child),
+#guide-links-secondary.ytd-guide-renderer > a:not(:last-child) {
+  margin-right: 8px;
+}
+
+#footer.ytd-guide-renderer > #copyright {
+  padding: 16px 24px;
+  color: $yt-spec-text-disabled;
+  font-family: 'Roboto', 'Aerial', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  display: block!important;
+}
