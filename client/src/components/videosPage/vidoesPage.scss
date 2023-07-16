@@ -1,4 +1,4 @@
-@import "src/index";
+@import "../../index";
 
 ytd-page-manager {
   display: block;
@@ -565,6 +565,6 @@ ytd-video-meta-block:not([inline-badges]) #metadata-line.ytd-video-meta-block sp
   }
 }
 
-@media (min-width: 392px) {
-  margin: 0;
-}
+//@media (min-width: 392px) {
+//  margin: 0;
+//}

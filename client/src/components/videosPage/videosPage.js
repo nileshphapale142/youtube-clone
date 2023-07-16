@@ -1,6 +1,7 @@
 import './vidoesPage.scss'
 import YTButtonRenderer from "../ExtraComponenets/Buttons/button";
 import {chipsRightArrowButtonPath} from "../ExtraComponenets/IconShapes/iconShapesPaths";
+import {useEffect, useState} from "react";
 
 //TODO: Arrows to do in chips bar
 //TODO: Separating row and item into individual component
@@ -44,7 +45,7 @@ const chipsArray = [
 
 function YTFeedChipsRenderer(props) {
 
-    let chips = chipsArray.map((chip) =>
+    let chips = props.chips.map((chip) =>
         <yt-chip-cloud-chip-renderer class={'ytd-feed-filter-chip-bar-renderer iron-selection'}
                                      aria-selected={'true'} role={'tab'} tabindex={0}
                                      chip-style={'STYLE_HOME_FILTER'}>
@@ -72,6 +73,13 @@ function Header() {
         'yt-spec-button-shape-next--size-m ' +
         'yt-spec-button-shape-next--icon-only-default'
 
+    let [chips, setChips] = useState([])
+
+
+    useEffect(() => {
+        fetch('/chips' ).then(response => response.json()).then(body => setChips(body))
+    }, [])
+
     return (
         <div id={'header'} className={'ytd-rich-grid-renderer'}>
             <ytd-feed-filter-chip-bar-renderer class={'ytd-rich-grid-renderer'}
@@ -83,7 +91,7 @@ function Header() {
                 <div id={'chips-wrapper'} className={'ytd-feed-filter-chip-bar-renderer'}>
                     <div id={'scroll-container'} className={'ytd-feed-filter-chip-bar-renderer'}
                          style={{touchAction: "pan-y"}}>
-                        <YTFeedChipsRenderer/>
+                        <YTFeedChipsRenderer chips={chips}/>
                     </div>
                     <div id={'right-arrow'} className={'ytd-feed-filter-chip-bar-renderer'}>
                         <div id={'right-arrow-button'} className={'ytd-feed-filter-chip-bar-renderer'}>
