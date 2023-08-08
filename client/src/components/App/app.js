@@ -4,34 +4,33 @@ import SideBar from "../sidebar/sidebar";
 import VideosPage from "../videosPage/videosPage";
 import {PopupContainer} from "../popupContainer/popupContainer";
 import {useEffect, useState} from "react";
-import {type} from "@testing-library/user-event/dist/type";
+import {RecoilRoot} from "recoil";
 
-export default function App() {
+
+function YtdApp(props) {
     let [pageMenuOptionsVisibility, setPageMenuOptionsVisibility] = useState(false)
-    let [data, setData] = useState(null)
-
-
-    // useEffect(() => {
-    //     fetch('/some')
-    //         .then(response => response.json())
-    //         .then(body => setData(body))
-    // }, [])
 
     const handlePageMenuOptions = () => {
         setPageMenuOptionsVisibility(!pageMenuOptionsVisibility)
     }
 
-    // if (typeof data.some !== undefined) alert('Message is : ' + data.some)
-
-    return  (
-        <ytd-app darker-dark-theme guide-persistent-and-visible>
+    return (
+        <ytd-app darker-dark-theme guide-persistent-and-visible={false}>
             <div id={'contents'}>
                 <Header onMenuButtonClick={handlePageMenuOptions}/>
-                <SideBar/>
+                {/*<SideBar/>*/}
                 <VideosPage/>
             </div>
             <PopupContainer isVisible={pageMenuOptionsVisibility}/>
         </ytd-app>
+    )
+}
+
+export default function App() {
+    return  (
+        <RecoilRoot>
+            <YtdApp/>
+        </RecoilRoot>
     )
 
 }

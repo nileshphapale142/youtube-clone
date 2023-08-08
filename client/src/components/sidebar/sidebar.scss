@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "../../index";
 
-tp-yt-app-drawer.ytd-app[persistent] {
-  z-index: 2005;
+tp-yt-app-drawer.ytd-app {
+  &[persistent=true] {
+    z-index: 2005;
+  }
+  :not([persistent=true]) {
+    z-index: 2030;
+  }
 }
 
-tp-yt-app-drawer.ytd-app[persistent][position=left] {
+tp-yt-app-drawer.ytd-app[persistent=true][position=left] {
   right: auto;
 }
 
-tp-yt-app-drawer[persistent] {
+tp-yt-app-drawer[persistent=true] {
   width: $app-drawer-width;
 }
 
-tp-yt-app-drawer[opened] {
+tp-yt-app-drawer[opened=true] {
   visibility: visible;
 }
 

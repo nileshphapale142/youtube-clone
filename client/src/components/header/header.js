@@ -53,13 +53,14 @@ export function SignInButton() {
     )
 }
 
-function Start() {
+function Start(props) {
     return (
         <div id={'start'} className={'ytd-masthead'}>
             <yt-icon-button id={'guide-button'} class={'ytd-masthead'}
                             toggleable={'true'}>
                 <button id='button' aria-pressed={'true'} className={'yt-icon-button'}
-                        aria-label={'Guide'} aria-pressed={'true'}>
+                        aria-label={'Guide'} aria-pressed={'true'}
+                >
                     <yt-icon id={'guide-icon'} icon={'yt-icons:menu'}
                              class={'ytd-masthead'}>
                         <YoutubeIconShape path={menuButtonPath} color={'white'}/>

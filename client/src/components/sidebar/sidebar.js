@@ -94,7 +94,7 @@ function Footer({footers}) {
     )
 }
 
-export default function SideBar() {
+export default function SideBar(props) {
 
     let sectionItems = sections.map((section, index) =>
         section.isSignIn ? <SignInSectionRenderer/> :
